@@ -1,1 +1,1 @@
-# nextjs-tailwind-basic
+# NextJS + Tailwind Basic Boilerplate
