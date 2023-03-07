@@ -1,11 +1,26 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Safari 15 gray border bug fix */
+/* https://nextjs.org/docs/api-reference/next/image */
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+        clip-path: inset(0.6px)
+    }
+}
 
 html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, .04);
 }
 
-label[for] {
+label[for],
+button:not([disabled]) {
     @apply cursor-pointer;
+}
+
+svg {
+    @apply block max-w-full;
 }
